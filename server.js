@@ -10,7 +10,6 @@ require('dotenv').config();
 const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 5000;
-// const mongoURI = 'mongodb://localhost:27017/movie-library';
 const mongoURI = process.env.mongoURI;
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
