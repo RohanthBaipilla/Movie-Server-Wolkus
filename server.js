@@ -107,7 +107,7 @@ app.post('/signup', async (req, res) => {
       from: process.env.EMAIL_USER,
       to: newUser.email,
       subject: 'Email Verification',
-      text: `Please verify your email by clicking the link: \nhttp://localhost:3000/verify-email?token=${verificationToken}`
+      text: `Please verify your email by clicking the link: \nhttps://movie-hunters-wolkus.vercel.app/verify-email?token=${verificationToken}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -188,7 +188,7 @@ app.post('/request-reset-password', async (req, res) => {
       from: process.env.EMAIL_USER,
       to: user.email,
       subject: 'Password Reset',
-      text: `Please reset your password by clicking the link: \nhttp://localhost:3000/reset-password?token=${resetToken}`,
+      text: `Please reset your password by clicking the link: \nhttps://movie-hunters-wolkus.vercel.app/reset-password?token=${resetToken}`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
